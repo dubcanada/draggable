@@ -712,7 +712,7 @@
 	}
 
 	function isElement (thing) {
-        if (typeof Document == undefined) {
+        if (typeof Document == 'undefined') {
             return thing instanceof Element || thing instanceof HTMLDocument;
         }else {
             return thing instanceof Element || thing instanceof Document;
