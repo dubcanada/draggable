@@ -201,7 +201,7 @@
 			}
 
 			// optional styling
-			
+
 			if (options.setPosition) {
 				style.display = 'block';
 				style.left = _dimensions.left + 'px';
@@ -712,7 +712,11 @@
 	}
 
 	function isElement (thing) {
-		return thing instanceof Element || thing instanceof Document;
+        if (typeof Document == undefined) {
+            return thing instanceof Element || thing instanceof HTMLDocument;
+        }else {
+            return thing instanceof Element || thing instanceof Document;
+        }
 	}
 
 	function isFunction (thing) {
