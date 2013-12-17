@@ -712,7 +712,7 @@
 	}
 
 	function isElement (thing) {
-		return thing instanceof Element || thing instanceof HTMLDocument;
+		return thing instanceof Element || thing instanceof Document;
 	}
 
 	function isFunction (thing) {
